@@ -1,5 +1,3 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 import { ThemeProvider } from "styled-components/native";
 import {
   useFonts,
@@ -9,29 +7,14 @@ import {
 
 import theme from "./src/theme";
 import { ActivityIndicator } from "react-native";
+import { Home } from "./src/screens/Home";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ NunitoSans_400Regular, NunitoSans_700Bold });
 
   return (
     <ThemeProvider theme={theme}>
-      {fontsLoaded ? (
-        <View style={styles.container}>
-          <Text>Open up App.tsx to start working on your app!</Text>
-          <StatusBar style="auto" />
-        </View>
-      ) : (
-        <ActivityIndicator />
-      )}
+      {fontsLoaded ? <Home /> : <ActivityIndicator />}
     </ThemeProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
