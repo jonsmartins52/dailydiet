@@ -1,4 +1,5 @@
 import { ThemeProvider } from "styled-components/native";
+import { ActivityIndicator } from "react-native";
 import {
   useFonts,
   NunitoSans_400Regular,
@@ -6,15 +7,14 @@ import {
 } from "@expo-google-fonts/nunito-sans";
 
 import theme from "./src/theme";
-import { ActivityIndicator } from "react-native";
-import { Home } from "./src/screens/Home";
+import { Routes } from "./src/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ NunitoSans_400Regular, NunitoSans_700Bold });
 
   return (
     <ThemeProvider theme={theme}>
-      {fontsLoaded ? <Home /> : <ActivityIndicator />}
+      {fontsLoaded ? <Routes /> : <ActivityIndicator />}
     </ThemeProvider>
   );
 }
