@@ -11,3 +11,14 @@ export const Title = styled.Text`
   font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
   font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
 `;
+
+export const ListContainer = styled.View`
+  margin-top: 10px;
+`;
+
+export const SectionTitle = styled.Text`
+  color: ${({ theme }) => theme.COLORS.GRAY_100};
+  font-size: ${({ theme }) => theme.FONT_SIZE.LG}px;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+  margin-bottom: 10px;
+`;
