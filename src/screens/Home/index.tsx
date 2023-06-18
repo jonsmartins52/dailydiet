@@ -1,4 +1,5 @@
 import { SectionList } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import { Header } from "../../components/Header";
 import { Percent } from "../../components/Percent";
@@ -8,6 +9,7 @@ import { MealCard } from "../../components/MealCard";
 import { Container, Title, ListContainer, SectionTitle } from "./styles";
 
 export function Home() {
+  const navigation = useNavigation();
   const DATA = [
     {
       title: "12.08.22",
@@ -42,10 +44,14 @@ export function Home() {
     },
   ];
 
+  function handleStats() {
+    navigation.navigate("stats" as never);
+  }
+
   return (
     <Container>
       <Header />
-      <Percent />
+      <Percent onPress={handleStats} />
       <Title>Refeições</Title>
       <Button title="Nova refeição" icon="add" />
 

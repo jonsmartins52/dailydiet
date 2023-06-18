@@ -6,10 +6,14 @@ import {
   IconContainer,
 } from "./styles";
 
-export function Percent() {
+type Props = {
+  onPress: () => void;
+};
+
+export function Percent({ onPress }: Props) {
   return (
     <Container isFollowingDiet>
-      <IconContainer onPress={() => {}}>
+      <IconContainer onPress={onPress}>
         <ArrowIcon />
       </IconContainer>
       <PercentValue>90,86%</PercentValue>
