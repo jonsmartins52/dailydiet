@@ -8,13 +8,14 @@ import {
 
 type Props = {
   onPress: () => void;
+  isOnDiet: boolean;
 };
 
-export function Percent({ onPress }: Props) {
+export function Percent({ onPress, isOnDiet }: Props) {
   return (
-    <Container isFollowingDiet>
+    <Container isFollowingDiet={isOnDiet}>
       <IconContainer onPress={onPress}>
-        <ArrowIcon />
+        <ArrowIcon isFollowingDiet={isOnDiet} />
       </IconContainer>
       <PercentValue>90,86%</PercentValue>
       <PercentText>das refeições dentro da dieta</PercentText>

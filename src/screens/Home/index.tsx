@@ -51,7 +51,7 @@ export function Home() {
   return (
     <Container>
       <Header />
-      <Percent onPress={handleStats} />
+      <Percent onPress={handleStats} isOnDiet />
       <Title>Refeições</Title>
       <Button title="Nova refeição" icon="add" />
 
@@ -65,6 +65,7 @@ export function Home() {
           renderSectionHeader={({ section: { title } }) => (
             <SectionTitle>{title}</SectionTitle>
           )}
+          showsVerticalScrollIndicator={false}
         />
       </ListContainer>
     </Container>

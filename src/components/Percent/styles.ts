@@ -2,7 +2,7 @@ import styled from "styled-components/native";
 import { ArrowUpRight } from "phosphor-react-native";
 
 export type PercentProps = {
-  isFollowingDiet?: boolean;
+  isFollowingDiet: boolean;
 };
 
 export const Container = styled.View<PercentProps>`
@@ -31,7 +31,9 @@ export const IconContainer = styled.TouchableOpacity`
   margin-bottom: 20px;
 `;
 
-export const ArrowIcon = styled(ArrowUpRight).attrs(({ theme }) => ({
-  size: 24,
-  color: theme.COLORS.GREEN_DARK,
-}))``;
+export const ArrowIcon = styled(ArrowUpRight).attrs<PercentProps>(
+  ({ theme, isFollowingDiet }) => ({
+    size: 24,
+    color: isFollowingDiet ? theme.COLORS.GREEN_DARK : theme.COLORS.RED_DARK,
+  })
+)``;
