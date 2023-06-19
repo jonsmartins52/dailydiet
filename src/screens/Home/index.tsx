@@ -48,12 +48,16 @@ export function Home() {
     navigation.navigate("stats" as never);
   }
 
+  function handleAddMeal() {
+    navigation.navigate("addMeal" as never);
+  }
+
   return (
     <Container>
       <Header />
       <Percent onPress={handleStats} isOnDiet />
       <Title>Refeições</Title>
-      <Button title="Nova refeição" icon="add" />
+      <Button title="Nova refeição" icon="add" onPress={handleAddMeal} />
 
       <ListContainer>
         <SectionList
