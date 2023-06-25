@@ -20,11 +20,6 @@ export const PercentValue = styled.Text`
   font-size: ${({ theme }) => theme.FONT_SIZE.XXL}px;
 `;
 
-export const PercentText = styled.Text`
-  font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
-  font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
-`;
-
 export const IconContainer = styled.TouchableOpacity`
   flex: 1;
   align-self: flex-end;

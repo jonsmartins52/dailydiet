@@ -8,14 +8,13 @@ export const Container = styled(SafeAreaView)`
 `;
 
 export const TitleSection = styled.View`
-  height: 200px;
+  height: 130px;
+  gap: 90px;
   align-items: center;
-  justify-content: center;
   flex-direction: row;
 `;
 
 export const IconContainer = styled.TouchableOpacity`
-  align-self: flex-start;
   margin-left: 20px;
 `;
 
@@ -24,3 +23,16 @@ export const Icon = styled(MaterialIcons).attrs(({ theme }) => ({
   color: theme.COLORS.GRAY_200,
   name: "arrow-back",
 }))``;
+
+export const Title = styled.Text`
+  color: ${({ theme }) => theme.COLORS.GRAY_100};
+  font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+  font-size: ${({ theme }) => theme.FONT_SIZE.LG}px;
+  text-align: center;
+`;
+
+export const Form = styled.View`
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+`;

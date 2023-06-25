@@ -1,10 +1,6 @@
-import {
-  Container,
-  PercentValue,
-  PercentText,
-  ArrowIcon,
-  IconContainer,
-} from "./styles";
+import { Description } from "../../styles/Description";
+
+import { Container, PercentValue, ArrowIcon, IconContainer } from "./styles";
 
 type Props = {
   onPress: () => void;
@@ -18,7 +14,7 @@ export function Percent({ onPress, isOnDiet }: Props) {
         <ArrowIcon isFollowingDiet={isOnDiet} />
       </IconContainer>
       <PercentValue>90,86%</PercentValue>
-      <PercentText>das refeições dentro da dieta</PercentText>
+      <Description>das refeições dentro da dieta</Description>
     </Container>
   );
 }

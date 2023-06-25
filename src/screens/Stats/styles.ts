@@ -42,20 +42,6 @@ export const StatsSubTitle = styled.Text`
   margin-bottom: 30px;
 `;
 
-export const StatsText = styled.Text`
-  color: ${({ theme }) => theme.COLORS.GRAY_200};
-  font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
-  font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
-  text-align: center;
-`;
-
-export const Content = styled.View`
-  align-items: center;
-  flex: 1;
-  background-color: #fafafa;
-  border-radius: 20px;
-`;
-
 export const StatsArea = styled.View`
   align-items: center;
   justify-content: center;
