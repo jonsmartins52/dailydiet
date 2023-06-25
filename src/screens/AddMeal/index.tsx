@@ -18,6 +18,7 @@ import {
   Scrollview,
 } from "./styles";
 import { Label } from "../../styles/Label";
+import { MealButton } from "../../components/MealButton";
 
 export function AddMeal() {
   const navigation = useNavigation();
@@ -63,7 +64,10 @@ export function AddMeal() {
             <Section>
               <Label>Está dentro da dieta?</Label>
             </Section>
-            <Row></Row>
+            <Row>
+              <MealButton title="Sim" isOnDiet />
+              <MealButton title="Não" isOnDiet={false} />
+            </Row>
           </Form>
 
           <Button title="Cadastrar refeição" style={{ marginBottom: 25 }} />

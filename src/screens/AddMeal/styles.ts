@@ -26,7 +26,6 @@ export const Form = styled.View`
   gap: 12px;
   align-items: center;
   justify-content: center;
-
   margin-bottom: 25px;
 `;
 
