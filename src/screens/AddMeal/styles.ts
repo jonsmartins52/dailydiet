@@ -7,6 +7,10 @@ export const Container = styled(SafeAreaView)`
   flex: 1;
 `;
 
+export const Scrollview = styled.ScrollView`
+  padding-bottom: 15px;
+`;
+
 export const TitleSection = styled.View`
   height: 130px;
   gap: 90px;
@@ -16,6 +20,35 @@ export const TitleSection = styled.View`
 
 export const IconContainer = styled.TouchableOpacity`
   margin-left: 20px;
+`;
+
+export const Form = styled.View`
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+`;
+
+export const Section = styled.View`
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px;
+  width: 327px;
+`;
+
+export const Row = styled.View`
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+`;
+
+export const TimeSection = styled.View`
+  align-items: flex-start;
+  gap: 8px;
+  height: 89px;
+  padding: 16px;
+  width: 157px;
 `;
 
 export const Icon = styled(MaterialIcons).attrs(({ theme }) => ({
@@ -29,10 +62,4 @@ export const Title = styled.Text`
   font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
   font-size: ${({ theme }) => theme.FONT_SIZE.LG}px;
   text-align: center;
-`;
-
-export const Form = styled.View`
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
 `;
