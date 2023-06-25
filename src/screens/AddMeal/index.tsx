@@ -24,7 +24,7 @@ export function AddMeal() {
   const navigation = useNavigation();
 
   function handleBackButton() {
-    navigation.navigate("home" as never);
+    navigation.navigate("home");
   }
 
   return (

@@ -45,11 +45,11 @@ export function Home() {
   ];
 
   function handleStats() {
-    navigation.navigate("stats" as never);
+    navigation.navigate("stats");
   }
 
   function handleAddMeal() {
-    navigation.navigate("addMeal" as never);
+    navigation.navigate("addMeal");
   }
 
   return (

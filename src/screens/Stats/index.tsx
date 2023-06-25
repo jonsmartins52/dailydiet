@@ -22,7 +22,7 @@ export function Stats() {
   const navigation = useNavigation();
 
   function handleBackButton() {
-    navigation.navigate("home" as never);
+    navigation.navigate("home");
   }
 
   return (
